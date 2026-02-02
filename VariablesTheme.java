@@ -8,11 +8,11 @@ public class VariablesTheme {
         final long timeStart = System.nanoTime();
         System.out.println("1 ВЫВОД ASCII-ГРАФИКИ");
         System.out.println("\nс помощью String.join():");
-        System.out.println(String.join(" ","                    ","/\\"));
-        System.out.println(String.join(" ","   J","   a"," v     v"," /  \\"));
-        System.out.println(String.join(" ","   J","  a a"," v   v"," /_( )\\"));
-        System.out.println(String.join(" ","J  J"," aaaaa"," V V"," /      \\"));
-        System.out.println(String.join(" "," JJ"," a     a"," V"," /___/\\___\\"));
+        System.out.println(String.join(" ", "                    ", "/\\"));
+        System.out.println(String.join(" ", "   J", "   a", " v     v", " /  \\"));
+        System.out.println(String.join(" ", "   J", "  a a", " v   v", " /_( )\\"));
+        System.out.println(String.join(" ", "J  J", " aaaaa", " V V", " /      \\"));
+        System.out.println(String.join(" ", " JJ", " a     a", " V", " /___/\\___\\"));
         System.out.println("\nс помощью текстового блока:");
         System.out.println("""
                          /\\            
