@@ -17,11 +17,11 @@ public class VariableNamesTheme {
         System.out.println("произведение цифр = " + digitMultiplication);
 
         // максимальное число
-        int numberMax = numberSum;
-        System.out.println("максимальное число = " + numberMax);
+        int maxNumber = numberSum;
+        System.out.println("максимальное число = " + maxNumber);
 
         // количество десятков
-        int tenCount = numberMax / 10;
+        int tenCount = maxNumber / 10;
         System.out.println("количество десятков = " + tenCount);
 
         // вес собаки
@@ -53,12 +53,12 @@ public class VariableNamesTheme {
         System.out.println("число нулей = " + zeroCount);
 
         // уникальное число
-        int numberUnique = 5;
-        System.out.println("уникальное число = " + numberUnique);
+        int uniqueNumber = 5;
+        System.out.println("уникальное число = " + uniqueNumber);
 
         // случайное число
-        double numberRandom = Math.random();
-        System.out.println("случайное число = " + numberRandom);
+        double randomNumber = Math.random();
+        System.out.println("случайное число = " + randomNumber);
 
         // математическое выражение
         double mathExpression = 4.4 / 2;
@@ -69,8 +69,8 @@ public class VariableNamesTheme {
         System.out.println("счет в игре = " + gameScore);
 
         // максимальная длина
-        float lengthMax = 100.5f;
-        System.out.println("максимальная длина = " + lengthMax);
+        float maxLength = 100.5f;
+        System.out.println("максимальная длина = " + maxLength);
 
         // пункт меню
         int menuItem = 3;
@@ -81,8 +81,8 @@ public class VariableNamesTheme {
         System.out.println("стоимость кофе = " + coffeePrice);
 
         // начальная дата
-        String dateInit = "21.01.2026";
-        System.out.println("начальная дата = " + dateInit);
+        String initDate = "21.01.2026";
+        System.out.println("начальная дата = " + initDate);
 
         // окончание диапазона
         String rangeEnd = "21.05.2026";
@@ -113,8 +113,8 @@ public class VariableNamesTheme {
         System.out.println("путь до файла = " + filePath);
 
         // количество чисел в строке
-        int countOfIntegerInLine = 3;
-        System.out.println("количество чисел в строке = " + countOfIntegerInLine);
+        int countOfNumberInLine = 3;
+        System.out.println("количество чисел в строке = " + countOfNumberInLine);
 
         System.out.println("\n2. BOOLEAN-ПЕРЕМЕННЫЕ");
 
@@ -157,8 +157,8 @@ public class VariableNamesTheme {
         System.out.println("\n3. АББРЕВИАТУРЫ");
 
         // старый universally unique identifier
-        String uuidOld = "4fdfdd32df35";
-        System.out.println("старый universally unique identifier: " + uuidOld);
+        String oldUuid = "4fdfdd32df35";
+        System.out.println("старый universally unique identifier: " + oldUuid);
 
         // производитель оперативной памяти
         String ramProducer = "Samsung";
@@ -173,13 +173,13 @@ public class VariableNamesTheme {
         System.out.println("определение термина протокола передачи гипертекста: " + httpDefinition);
 
         // сокращенный uniform resource locator
-        String urlShort = "https://ya.ru";
-        System.out.println("сокращенный uniform resource locator: " + urlShort);
+        String shortUrl = "https://ya.ru";
+        System.out.println("сокращенный uniform resource locator: " + shortUrl);
 
         // новый идентификатор клиента
-        String clientIdNew = "4fdfdd32df35";
-        System.out.println("новый идентификатор клиента: " + clientIdNew);
-        
+        String newClientId = "4fdfdd32df35";
+        System.out.println("новый идентификатор клиента: " + newClientId);
+
         // количество символов в american standard code for information interchange
         int asciiCharsCount = 256;
         System.out.println("количество символов в american standard code for information interchange: " +
