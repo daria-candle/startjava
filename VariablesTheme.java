@@ -8,11 +8,11 @@ public class VariablesTheme {
         final long timeStart = System.nanoTime();
         System.out.println("\n1. ВЫВОД ASCII-ГРАФИКИ");
         System.out.println("\nс помощью String.join():");
-        System.out.println(String.join(" ", "                    ", "/\\",
-                "\n ", "   J", "   a", " v     v", " /  \\",
-                "\n ", "   J", "  a a", " v   v", " /_( )\\",
-                "\n ", "J  J", " aaaaa", " V V", " /      \\",
-                "\n ", " JJ", " a     a", " V", " /___/\\___\\"));
+        System.out.println(String.join("\n", "                     /\\",
+                "   J    a  v     v  /  \\",
+                "   J   a a  v   v  /_( )\\",
+                "J  J  aaaaa  V V  /      \\",
+                " JJ  a     a  V  /___/\\___\\"));
         System.out.println("\nс помощью текстового блока:");
         System.out.println("""
                          /\\            
@@ -133,10 +133,10 @@ public class VariablesTheme {
         System.out.println(" Характеристики JVM:");
         Runtime rt = Runtime.getRuntime();
         int availableProcessors = rt.availableProcessors();
-        double totalMemory = rt.totalMemory() / 1048576;
-        double freeMemory = rt.freeMemory() / 1048576;
+        double totalMemory = rt.totalMemory() / (1024 * 1024);
+        double freeMemory = rt.freeMemory() / (1024 * 1024);
         double usedMemory = totalMemory - freeMemory;
-        double maxMemory = rt.maxMemory() / 1048576;
+        double maxMemory = rt.maxMemory() / (1024 * 1024);
         System.out.printf("""
                  - доступное число ядер: %d
                  - выделенная память (МБ): %.1f

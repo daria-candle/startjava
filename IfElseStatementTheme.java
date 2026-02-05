@@ -4,8 +4,8 @@ import java.math.RoundingMode;
 public class IfElseStatementTheme {
     public static void main(String[] args) {
         System.out.println("1. ПЕРЕВОД ПСЕВДОКОДА НА ЯЗЫК JAVA\n");
-        boolean isGenderMale = false;
-        if (!isGenderMale) {
+        boolean isMaleGender = false;
+        if (!isMaleGender) {
             System.out.println("Вы - мужчина");
         } else {
             System.out.println("Вы - женщина!");
@@ -24,21 +24,21 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n\n2. ПОИСК БОЛЬШЕГО ЧИСЛА ШАГОВ\n");
-        int stepCountYesterday = 21062;
-        int stepCountToday = 10763;
-        System.out.println("Пройдено вчера (в шагах): " + stepCountYesterday);
-        System.out.println("Пройдено сегодня (в шагах): " + stepCountToday);
-        if (stepCountYesterday > stepCountToday) {
+        int stepYesterday = 21062;
+        int stepToday = 10763;
+        System.out.println("Пройдено вчера (в шагах): " + stepYesterday);
+        System.out.println("Пройдено сегодня (в шагах): " + stepToday);
+        if (stepYesterday > stepToday) {
             System.out.println("Вчера вы прошли больше, чем сегодня!");
-        } else if (stepCountYesterday < stepCountToday) {
+        } else if (stepYesterday < stepToday) {
             System.out.println("Вчера вы прошли меньше, чем сегодня!");
         } else {
             System.out.println("Вчера вы прошли столько же, как сегодня!");
         }
-        double stepCountAverage = (stepCountYesterday + stepCountToday) / 2.0;
-        System.out.println("Среднее количество шагов за 2 дня: " + stepCountAverage);
+        double averageStep = (stepYesterday + stepToday) / 2.0;
+        System.out.println("Среднее количество шагов за 2 дня: " + averageStep);
 
-        System.out.println("\n\n3. ПРОВЕРКА КОЛИЧЕСТВА ГОСТЕЙ");
+        System.out.println("\n\n3. ПРОВЕРКА КОЛИЧЕСТВА ГОСТЕЙ\n");
         int guestsNumber = 15;
         if (guestsNumber == 0) {
             System.out.println("Пока никто не записался на мероприятие!");
@@ -54,41 +54,39 @@ public class IfElseStatementTheme {
         String nickname = "daria_candle";
         char nicknameFirstLetter = nickname.charAt(0);
         System.out.println("Первый способ решения:");
+        System.out.print("Имя " + nickname + " начинается с ");
         if ((nicknameFirstLetter >= 'a' && nicknameFirstLetter <= 'z') | 
                 (nicknameFirstLetter >= 'а' && nicknameFirstLetter <= 'я')) {
-            System.out.println("Имя " + nickname + " начинается с маленькой буквы '" + 
-                    nicknameFirstLetter + "'");
+            System.out.println("маленькой буквы '" + nicknameFirstLetter + "'");
         } else if ((nicknameFirstLetter >= 'A' && nicknameFirstLetter <= 'Z') | 
                 (nicknameFirstLetter >= 'А' && nicknameFirstLetter <= 'Я')) {
-            System.out.println("Имя " + nickname + " начинается с большой буквы '" + 
-                    nicknameFirstLetter + "'");
+            System.out.println("большой буквы '" + nicknameFirstLetter + "'");
         } else if (nicknameFirstLetter >= '0' && nicknameFirstLetter <= '9') {
-            System.out.println("Имя " + nickname + " начинается с цифры '" + nicknameFirstLetter + "'");
+            System.out.println("цифры '" + nicknameFirstLetter + "'");
         } else {
-            System.out.println("Имя " + nickname + " начинается с символа '" + nicknameFirstLetter + "'");
+            System.out.println("символа '" + nicknameFirstLetter + "'");
         }
         System.out.println("\nВторой способ решения:");
-        if (Character.isLowerCase(nicknameFirstLetter) == true) {
-            System.out.println("Имя " + nickname + " начинается с маленькой буквы '" + 
-                    nicknameFirstLetter + "'");
-        } else if (Character.isUpperCase(nicknameFirstLetter) == true) {
-            System.out.println("Имя " + nickname + " начинается с большой буквы '" + 
-                    nicknameFirstLetter + "'");
-        } else if (Character.isDigit(nicknameFirstLetter) == true) {
-            System.out.println("Имя " + nickname + " начинается с цифры '" + nicknameFirstLetter + "'");
+        System.out.print("Имя " + nickname + " начинается с ");
+        if (Character.isLowerCase(nicknameFirstLetter)) {
+            System.out.println("маленькой буквы '" + nicknameFirstLetter + "'");
+        } else if (Character.isUpperCase(nicknameFirstLetter)) {
+            System.out.println("большой буквы '" + nicknameFirstLetter + "'");
+        } else if (Character.isDigit(nicknameFirstLetter)) {
+            System.out.println("цифры '" + nicknameFirstLetter + "'");
         } else {
-            System.out.println("Имя " + nickname + " начинается с символа '" + nicknameFirstLetter + "'");
+            System.out.println("символа '" + nicknameFirstLetter + "'");
         }
 
         System.out.println("\n\n5. ИНВЕНТАРИЗАЦИЯ\n");
-        short dbId = 123;
-        short currId = 103;
-        char dbIdHundreds = String.valueOf(dbId).charAt(0);
-        char dbIdTens = String.valueOf(dbId).charAt(1);
-        char dbIdOnes = String.valueOf(dbId).charAt(2);
-        char currIdHundreds = String.valueOf(currId).charAt(0);
-        char currIdTens = String.valueOf(currId).charAt(1);
-        char currIdOnes = String.valueOf(currId).charAt(2);
+        int dbId = 123;
+        int currId = 103;
+        int dbIdHundreds = dbId / 100;
+        int dbIdTens = (dbId % 100) / 10;
+        int dbIdOnes = dbId % 10;
+        int currIdHundreds = currId / 100;
+        int currIdTens = (currId % 100) / 10;
+        int currIdOnes = currId % 10;
         if (dbId == currId) {
             System.out.println("[№" + currId + "]: компьютер на 3-м этаже в кабинете 2");
         } else if (dbIdHundreds != currIdHundreds && dbIdTens != currIdTens &&
@@ -104,10 +102,10 @@ public class IfElseStatementTheme {
                     dbIdOnes == currIdOnes ? dbIdOnes : "_");
         }
 
-        System.out.println("\n\n6. ПОДСЧЕТ НАЧИСЛЕННЫХ БАНКОМ %\n");
+        System.out.println("\n6. ПОДСЧЕТ НАЧИСЛЕННЫХ БАНКОМ %\n");
         System.out.println("первый способ решения (без округления):");
         float depositBalance = 321123.79f;
-        float depositRate;
+        float depositRate = 0.1f;
         if (depositBalance <= 0.0f) {
             System.out.println("Внимание! Баланс отрицательный");
             depositRate = 0.0f;
@@ -115,8 +113,6 @@ public class IfElseStatementTheme {
             depositRate = 0.05f;
         } else if (depositBalance <= 300000.0f) {
             depositRate = 0.07f;
-        } else {
-            depositRate = 0.1f;
         }
         float depositRateSum = depositBalance * depositRate;
         float depositCommonSum = depositBalance + depositRateSum;
@@ -144,30 +140,26 @@ public class IfElseStatementTheme {
         System.out.println("итоговая сумма с %: " + depositCommonSumBd + " руб.");
 
         System.out.println("\n\n7. ОПРЕДЕЛЕНИЕ ОЦЕНКИ ПО ПРЕДМЕТАМ %\n");
-        byte historyResult = 59;
-        byte historyGrade;
-        if (historyResult <= 60) {
+        int historyPercentage = 59;
+        int historyGrade = 5;
+        if (historyPercentage <= 60) {
             historyGrade = 2;
-        } else if (historyResult <= 73) {
+        } else if (historyPercentage <= 73) {
             historyGrade = 3;
-        } else if (historyResult <= 90) {
+        } else if (historyPercentage <= 90) {
             historyGrade = 4;
-        } else {
-            historyGrade = 5;
         }
-        byte codingResult = 92;
-        byte codingGrade;
-        if (codingResult <= 60) {
+        int codingPercentage = 92;
+        int codingGrade = 5;
+        if (codingPercentage <= 60) {
             codingGrade = 2;
-        } else if (codingResult <= 73) {
+        } else if (codingPercentage <= 73) {
             codingGrade = 3;
-        } else if (codingResult <= 90) {
+        } else if (codingPercentage <= 90) {
             codingGrade = 4;
-        } else {
-            codingGrade = 5;
         }
         float gradeAverage = (historyGrade + codingGrade) / 2.0f;
-        float resultsAverage = (historyResult + codingResult) / 2.0f;
+        float resultsAverage = (historyPercentage + codingPercentage) / 2.0f;
         System.out.println("Оценка по истории: " + historyGrade);
         System.out.println("Оценка по программированию: " + codingGrade);
         System.out.println("Средний балл оценок по предметам: " + gradeAverage);
@@ -178,8 +170,10 @@ public class IfElseStatementTheme {
         BigDecimal rentMonth = BigDecimal.valueOf(5123.018);
         BigDecimal costPriceMonth = BigDecimal.valueOf(9001.729);
         BigDecimal monthsCount = BigDecimal.valueOf(12);
-        BigDecimal profitMonth = revenueMonth.subtract(rentMonth).subtract(costPriceMonth);
-        BigDecimal profitYear = profitMonth.multiply(monthsCount).setScale(2, RoundingMode.HALF_UP);
+        BigDecimal profitYear = revenueMonth.subtract(rentMonth)
+                .subtract(costPriceMonth)
+                .multiply(BigDecimal.valueOf(12))
+                .setScale(2, RoundingMode.HALF_UP);
         if (profitYear.signum() == 1) {
             System.out.println("Прибыль за год: +" + profitYear + " руб.");
         } else {
