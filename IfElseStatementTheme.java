@@ -10,7 +10,7 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Вы - женщина!");
         }
-        byte age = 17;
+        int age = 17;
         if (age > 18) {
             System.out.println("Возможно, вы - Юрий Лоза");
         } else {
@@ -96,7 +96,7 @@ public class IfElseStatementTheme {
             System.out.printf("""
                     Нет полного совпадения:
                     База данных: [№%d]
-                    Фактический: [%s%s%s]%n
+                    Фактический: [№%s%s%s]%n
                     """, dbId, dbIdHundreds == currIdHundreds ? dbIdHundreds : "_", 
                     dbIdTens == currIdTens ? dbIdTens : "_",
                     dbIdOnes == currIdOnes ? dbIdOnes : "_");
@@ -119,18 +119,17 @@ public class IfElseStatementTheme {
         System.out.println("сумма вклада: " + depositBalance + " руб.");
         System.out.println("сумма начисленного %: " + depositRateSum + " руб.");
         System.out.println("итоговая сумма с %: " + depositCommonSum + " руб.");
+
         System.out.println("\nвторой способ решения (с округлением):");
         BigDecimal depositBalanceBd = BigDecimal.valueOf(321123.79);
-        BigDecimal depositRateBd;
-        if (depositBalanceBd.floatValue() <= 0.0f) {
+        BigDecimal depositRateBd = BigDecimal.valueOf(0.1);
+        if (depositBalanceBd.compareTo(BigDecimal.ZERO) != 1) {
             System.out.println("Внимание! Баланс отрицательный");
-            depositRateBd = BigDecimal.valueOf(0.0);
-        } else if (depositBalanceBd.floatValue() < 100000.0f) {
+            depositRateBd = BigDecimal.ZERO;
+        } else if (depositBalanceBd.compareTo(BigDecimal.valueOf(100000.0)) == -1) {
             depositRateBd = BigDecimal.valueOf(0.05);
-        } else if (depositBalanceBd.floatValue() <= 300000.0f) {
+        } else if (depositBalanceBd.compareTo(BigDecimal.valueOf(300000.0)) != 1) {
             depositRateBd = BigDecimal.valueOf(0.07);
-        } else {
-            depositRateBd = BigDecimal.valueOf(0.1);
         }
         BigDecimal depositRateSumBd =
                 depositBalanceBd.multiply(depositRateBd).setScale(2, RoundingMode.HALF_UP);
@@ -158,12 +157,12 @@ public class IfElseStatementTheme {
         } else if (codingPercentage <= 90) {
             codingGrade = 4;
         }
-        float gradeAverage = (historyGrade + codingGrade) / 2.0f;
-        float resultsAverage = (historyPercentage + codingPercentage) / 2.0f;
+        float averageGrade = (historyGrade + codingGrade) / 2.0f;
+        float averagePercentage = (historyPercentage + codingPercentage) / 2.0f;
         System.out.println("Оценка по истории: " + historyGrade);
         System.out.println("Оценка по программированию: " + codingGrade);
-        System.out.println("Средний балл оценок по предметам: " + gradeAverage);
-        System.out.println("Средний % по предметам: " + resultsAverage);
+        System.out.println("Средний балл оценок по предметам: " + averageGrade);
+        System.out.println("Средний % по предметам: " + averagePercentage);
 
         System.out.println("\n\n8. РАСЧЕТ ГОДОВОЙ ПРИБЫЛИ %\n");
         BigDecimal revenueMonth = BigDecimal.valueOf(13025.233);

@@ -3,28 +3,26 @@ import java.util.Random;
 public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("\n1. ВЫВОД ASCII-СИМВОЛОВ\n");
-        System.out.println("DECIMAL   CHARACTER   DESCRIPTION");
-        for (int asciiCode = 33; asciiCode <= 47; asciiCode += 2) {
-            System.out.printf("%4d          %-13c%s%n", asciiCode, asciiCode, Character.getName(asciiCode));
-        }
-        for (int asciiCode = 98; asciiCode <= 122; asciiCode += 2) {
-            System.out.printf("%4d          %-13c%s%n", asciiCode, asciiCode, Character.getName(asciiCode));
+        System.out.printf("%s%12s%14s%n", "DECIMAL", "CHARACTER", "DESCRIPTION");
+        for (int asciiCode = 33; asciiCode <= 122; asciiCode += 2) {
+            if (asciiCode <= 47 | asciiCode >= 98) {
+                System.out.printf("%4d%11c%12s%-1s%n", asciiCode, asciiCode, "", 
+                        Character.getName(asciiCode));
+            }
         }
 
         System.out.println("\n\n2. ВЫВОД ГЕОМЕТРИЧЕСКИХ ФИГУР\n");
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 10; j++) {
-                System.out.print("-");
-            }
+        for (int row = 1; row <= 5; row++) {
+            System.out.print("----------");
             System.out.print(" ");
-            for (int j = 1; j <= (6 - i); j++) {
+            for (int col = 1; col <= (6 - row); col++) {
                 System.out.print("*");
             }
             System.out.print(" ");
-            for (int j = 1; j <= (i * 2 - 1); j++) {
+            for (int col = 1; col <= (row * 2 - 1); col++) {
                 System.out.print("^");
             }
-            System.out.print(" \n");
+            System.out.println();
         }
 
         System.out.println("\n\n3. ВЫВОД ТАБЛИЦЫ УМНОЖЕНИЯ\n");
@@ -54,20 +52,20 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\n5. ВЫВОД ЧИСЕЛ МЕЖДУ MIN И MAX\n");
-        int initialNumber1 = 10;
-        int initialNumber2 = 5;
-        int initialNumber3 = -1;
-        System.out.printf("Исходные числа: %d, %d, %d;%n", initialNumber1, initialNumber2, initialNumber3);
-        int minNumber = initialNumber1;
-        int maxNumber = initialNumber2;
-        if (initialNumber1 > initialNumber2) {
-            maxNumber = initialNumber1;
-            minNumber = initialNumber2;
+        int a = 10;
+        int b = 5;
+        int c = -1;
+        System.out.printf("Исходные числа: %d, %d, %d;%n", a, b, c);
+        int min = a;
+        int max = b;
+        if (a > b) {
+            max = a;
+            min = b;
         }
-        minNumber = (minNumber > initialNumber3) ? initialNumber3 : minNumber;
-        maxNumber = (maxNumber < initialNumber3) ? initialNumber3 : maxNumber;
-        System.out.printf("В порядке убывания в промежутке (%d,%d):%n", minNumber, maxNumber);
-        for (int i = (maxNumber - 1); i > minNumber; i--) {
+        min = (min > c) ? c : min;
+        max = (max < c) ? c : max;
+        System.out.printf("В порядке убывания в промежутке (%d,%d):%n", min, max);
+        for (int i = (max - 1); i > min; i--) {
             System.out.print(i + " ");
         }
 

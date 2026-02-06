@@ -8,7 +8,8 @@ public class VariablesTheme {
         final long timeStart = System.nanoTime();
         System.out.println("\n1. ВЫВОД ASCII-ГРАФИКИ");
         System.out.println("\nс помощью String.join():");
-        System.out.println(String.join("\n", "                     /\\",
+        System.out.println(String.join("\n",
+                "                     /\\",
                 "   J    a  v     v  /  \\",
                 "   J   a a  v   v  /_( )\\",
                 "J  J  aaaaa  V V  /      \\",
@@ -132,11 +133,12 @@ public class VariablesTheme {
         System.out.println("\n7. ВЫВОД ПАРАМЕТРОВ JVM И ОС\n");
         System.out.println(" Характеристики JVM:");
         Runtime rt = Runtime.getRuntime();
+        int bytes = 1024 * 1024;
         int availableProcessors = rt.availableProcessors();
-        double totalMemory = rt.totalMemory() / (1024 * 1024);
-        double freeMemory = rt.freeMemory() / (1024 * 1024);
+        double totalMemory = rt.totalMemory() / bytes;
+        double freeMemory = rt.freeMemory() / bytes;
         double usedMemory = totalMemory - freeMemory;
-        double maxMemory = rt.maxMemory() / (1024 * 1024);
+        double maxMemory = rt.maxMemory() / bytes;
         System.out.printf("""
                  - доступное число ядер: %d
                  - выделенная память (МБ): %.1f
