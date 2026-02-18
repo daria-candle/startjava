@@ -2,22 +2,23 @@ import java.util.Random;
 
 public class MyFirstGame {
     public static void main(String[] args) {
-        int a = 1;
-        int b = 100;
-        int hiddenNumber = new Random().nextInt(a, b);
-        boolean isWin = false;
+        int leftNumber = 1;
+        int rightNumber = 100;
+        int hiddenNumber = new Random().nextInt(leftNumber, rightNumber + 1);
+        Random random = new Random();
+        int playerNumber;
         do {
-            int checkNumber = (a != b) ? new Random().nextInt(a, b + 1) : a;
-            if (checkNumber > hiddenNumber) {
-                System.out.println(checkNumber + " больше того, что загадал компьютер");
-                b = checkNumber - 1;
-            } else if (checkNumber < hiddenNumber) {
-                System.out.println(checkNumber + " меньше того, что загадал компьютер");
-                a = checkNumber + 1;
+            playerNumber = random.nextInt(leftNumber, rightNumber + 1);
+            if (playerNumber > hiddenNumber) {
+                System.out.println(playerNumber + " больше того, что загадал компьютер");
+                rightNumber = playerNumber - 1;
+            } else if (playerNumber < hiddenNumber) {
+                System.out.println(playerNumber + " меньше того, что загадал компьютер");
+                leftNumber = playerNumber + 1;
             } else {
-                System.out.println(checkNumber + " - число угадано! Вы победили!");
-                isWin = true;
+                break;
             }
-        } while (!isWin);
+        } while (true);
+        System.out.println(playerNumber + " - число угадано! Вы победили!");
     }
 }

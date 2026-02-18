@@ -69,27 +69,24 @@ public class CyclesTheme {
         }
 
         System.out.println("\n\n\n6. РАЗНЫЕ ОПЕРАЦИИ НАД ЧИСЛОМ\n");
-        originalNumber = 1234321;
+        originalNumber = 2234321;
         System.out.println("Исходное число: " + originalNumber);
         int twosCount = 0;
         boolean isPalindrome = true;
         int reversedNumber = originalNumber % 10;
         int currentNumber = originalNumber / 10;
         while (currentNumber > 0) {
-            reversedNumber *= 10;
             int digit = currentNumber % 10;
-            reversedNumber += digit;
+            reversedNumber = reversedNumber * 10 + digit;
             if (digit == 2) {
                 twosCount++;
             }
             currentNumber /= 10;
         }
-        isPalindrome = (originalNumber != reversedNumber) ? false : isPalindrome;
-        System.out.printf("%d - %s с %s (%d) количеством двоек %n",
-                reversedNumber,
-                (isPalindrome ? "палиндром" : "не палиндром"),
-                ((twosCount % 2.0 == 0) ? "четным" : "нечетным"),
-                twosCount);
+        String palindromeMsg = originalNumber != reversedNumber ? " - не палиндром " : " - палиндром ";
+        System.out.printf("%07d - %s с %s (%d) количеством двоек %n",
+                reversedNumber, palindromeMsg,
+                ((twosCount % 2.0 == 0) ? "четным" : "нечетным"), twosCount);
     
         System.out.println("\n\n7. ПРОВЕРКА СЧАСТЛИВОГО ЧИСЛА\n");
         originalNumber = 101002;
