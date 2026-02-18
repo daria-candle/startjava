@@ -1,12 +1,11 @@
 import java.util.Random;
 
 public class RpsGameFormatting {
-
     // Игра Камень-Ножницы-Бумага
     public static void main(String[] args) throws InterruptedException {
-        String rock = "✊";
-        String scissors = "✌\uFE0F";
-        String paper = "✋";
+        String rock = "✊"; // камень
+        String scissors = "✌\uFE0F"; // ножницы
+        String paper = "✋"; // бумага
 
         // Ход первого игрока
         String name1 = "HEL";
