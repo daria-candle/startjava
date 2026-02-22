@@ -6,7 +6,6 @@ public class Calculator {
     public static void main(String[] args) {
         int operand1 = 0;
         int operand2 = 0;
-        float result;
         char operator = ' ';
         Scanner scanner = new Scanner(System.in);
         boolean isCorrectResult = false;
@@ -18,7 +17,7 @@ public class Calculator {
                 operator = scanner.next().charAt(0);
                 System.out.print("Введите второй операнд (натур. число): ");
                 operand2 = scanner.nextInt();
-                if (operand1 <= 0 | operand2 <= 0) {
+                if (operand1 <= 0 || operand2 <= 0) {
                     System.out.println("Введено не натуральное число. Повторите ввод");
                     isCorrectResult = false;
                 } else {
@@ -33,6 +32,7 @@ public class Calculator {
             }
         } while (!isCorrectResult);
         scanner.close();
+        float result;
         if (operator == '+') {
             result = operand1 + operand2;
         } else if (operator == '-') {

@@ -72,9 +72,8 @@ public class CyclesTheme {
         originalNumber = 2234321;
         System.out.println("Исходное число: " + originalNumber);
         int twosCount = 0;
-        boolean isPalindrome = true;
-        int reversedNumber = originalNumber % 10;
-        int currentNumber = originalNumber / 10;
+        int reversedNumber = 0;
+        int currentNumber = originalNumber;
         while (currentNumber > 0) {
             int digit = currentNumber % 10;
             reversedNumber = reversedNumber * 10 + digit;
@@ -83,7 +82,7 @@ public class CyclesTheme {
             }
             currentNumber /= 10;
         }
-        String palindromeMsg = originalNumber != reversedNumber ? " - не палиндром " : " - палиндром ";
+        String palindromeMsg = originalNumber != reversedNumber ? "не палиндром" : "палиндром";
         System.out.printf("%07d - %s с %s (%d) количеством двоек %n",
                 reversedNumber, palindromeMsg,
                 ((twosCount % 2.0 == 0) ? "четным" : "нечетным"), twosCount);
@@ -117,11 +116,11 @@ public class CyclesTheme {
         for (int i = 1; i <= 8; i++) {
             char character = (char) new Random().nextInt(33, 126);
             password += character;
-            if (character > 96 && character < 123) {
+            if (character >= 'a' && character <= 'z') {
                 hasLowerCase = true;
-            } else if (character > 64 && character < 91) {
+            } else if (character >= 'A' && character <= 'Z') {
                 hasUpperCase = true;
-            } else if (character > 47 && character < 58) {
+            } else if (character >= '0' && character <= '9') {
                 hasDigit = true;
             } else {
                 hasSpecialCharacters = true;
