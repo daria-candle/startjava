@@ -5,11 +5,11 @@ public class Wolf {
     private int age;
     private String color;
 
-    public char get_gender() {
+    public char getGender() {
         return gender;
     }
 
-    public void set_gender(char gender) {
+    public void setGender(char gender) {
         if (gender == ' ') {
             System.out.println("Пустое значение");
         } else {
@@ -17,11 +17,11 @@ public class Wolf {
         }
     }
 
-    public String get_name() {
+    public String getName() {
         return name;
     }
 
-    public void set_name(String name) {
+    public void setName(String name) {
         if (name == "") {
             System.out.println("Пустое значение");
         } else {
@@ -29,11 +29,11 @@ public class Wolf {
         }
     }
 
-    public float get_weight() {
+    public float getWeight() {
         return weight;
     }
 
-    public void set_weight(float weight) {
+    public void setWeight(float weight) {
         if (weight == 0.0) {
             System.out.println("Нулевое значение");
         } else {
@@ -41,11 +41,11 @@ public class Wolf {
         }
     }
 
-    public int get_age() {
+    public int getAge() {
         return age;
     }
 
-    public void set_age(int age) {
+    public void setAge(int age) {
         if (age == 0) {
             System.out.println("Нулевое значение");
         } else if (age > 8) {
@@ -55,11 +55,11 @@ public class Wolf {
         }
     }
 
-    public String get_color() {
+    public String getColor() {
         return color;
     }
 
-    public void set_color(String color) {
+    public void setColor(String color) {
         if (color == "") {
             System.out.println("Пустое значение");
         } else {
