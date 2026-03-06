@@ -5,67 +5,67 @@ public class NonBooleanMethods {
     }
 
     public void chooseMenuItem() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> выбрать пункт меню в текстовом редакторе на macOS");
     }
 
     public void calculateAverageGrades() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> вычислить среднее значение оценок в школе №1234");
     }
 
     public void countUniqueWords() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> подсчитать количество уникальных слов в 'Война и Мир'");
     }
 
     public void outMsgError() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> вывести сообщение об ошибке");
     }
 
     public void syncDataWithCloud() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> синхронизировать данные с облачным хранилищем");
     }
 
     public void restoreDataFromBackup() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> восстановить данные из резервной копии от 11.03.2024");
     }
 
     public void pauseDownloading() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> приостановить загрузку mp3-файла группы 'Ария'");
     }
 
     public void resetToFactorySettings() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> сбросить настройки до заводских для пылесоса Mi");
     }
 
     public void writeToFile() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> записать содержимое в файл по указанному пути на флешку");
     }
 
     public void convertCtoF() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> преобразовать температуру из Цельсия в Фаренгейт");
     }
 
     public void inputMathExpression() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> ввести математическое выражение с тремя аргументами");
     }
 
     public void identifyWinner() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> выявить победителя среди гонщиков игры 'Need For Speed'");
     }
 
     public void findBookByAuthor() {
-        System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +
+        System.out.println(Methods.getMethodName() +
                 "() -> найти книгу по имени писателя");
     }
 }

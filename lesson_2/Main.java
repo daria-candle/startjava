@@ -1,39 +1,39 @@
 public class Main {
     public static void main(String[] args) {
-        callNonBooleanMethods();
-        callBooleanMethods();
+        useNonBoolMethods();
+        useBoolMethods();
     }
 
-    private static void callNonBooleanMethods() {
+    private static void useNonBoolMethods() {
         System.out.println("\n1.НЕ BOOLEAN-МЕТОДЫ");
-        NonBooleanMethods nonBool = new NonBooleanMethods();
-        nonBool.findLongestWord();
-        nonBool.chooseMenuItem();
-        nonBool.calculateAverageGrades();
-        nonBool.countUniqueWords();
-        nonBool.outMsgError();
-        nonBool.syncDataWithCloud();
-        nonBool.restoreDataFromBackup();
-        nonBool.pauseDownloading();
-        nonBool.resetToFactorySettings();
-        nonBool.writeToFile();
-        nonBool.convertCtoF();
-        nonBool.inputMathExpression();
-        nonBool.identifyWinner();
-        nonBool.findBookByAuthor();
+        NonBooleanMethods nonBoolObject = new NonBooleanMethods();
+        nonBoolObject.findLongestWord();
+        nonBoolObject.chooseMenuItem();
+        nonBoolObject.calculateAverageGrades();
+        nonBoolObject.countUniqueWords();
+        nonBoolObject.outMsgError();
+        nonBoolObject.syncDataWithCloud();
+        nonBoolObject.restoreDataFromBackup();
+        nonBoolObject.pauseDownloading();
+        nonBoolObject.resetToFactorySettings();
+        nonBoolObject.writeToFile();
+        nonBoolObject.convertCtoF();
+        nonBoolObject.inputMathExpression();
+        nonBoolObject.identifyWinner();
+        nonBoolObject.findBookByAuthor();
     }
-    
-    private static void callBooleanMethods() {
+
+    private static void useBoolMethods() {
         System.out.println("\n2.BOOLEAN-МЕТОДЫ");
-        BooleanMethods bool = new BooleanMethods();
-        System.out.println(bool.isProgramContinue());
-        System.out.println(bool.hasUniqueNumber());
-        System.out.println(bool.isLetterEntered());
-        System.out.println(bool.hasEqualDigits());
-        System.out.println(bool.hasAttempts());
-        System.out.println(bool.isNullStringEntered());
-        System.out.println(bool.isEvenNumber());
-        System.out.println(bool.isPathValid());
-        System.out.println(bool.isFileExist());
+        BooleanMethods boolObject = new BooleanMethods();
+        System.out.println(boolObject.canContinue());
+        System.out.println(boolObject.hasUniqueNumber());
+        System.out.println(boolObject.isLetter());
+        System.out.println(boolObject.hasEqualDigits());
+        System.out.println(boolObject.hasAttempts());
+        System.out.println(boolObject.isEmptyString());
+        System.out.println(boolObject.isEvenNumber());
+        System.out.println(boolObject.isValidPath());
+        System.out.println(boolObject.isExistFile());
     }
 }

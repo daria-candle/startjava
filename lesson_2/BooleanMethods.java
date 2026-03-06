@@ -1,5 +1,5 @@
 public class BooleanMethods {
-    public boolean isProgramContinue() {
+    public boolean canContinue() {
         System.out.print(Methods.getMethodName() +
                 "() -> программа выполняется далее или завершается? ");
         return true;
@@ -11,7 +11,7 @@ public class BooleanMethods {
         return true;
     }
 
-    public boolean isLetterEntered() {
+    public boolean isLetter() {
         System.out.print(Methods.getMethodName() +
                 "() -> пользователь ввел букву или что-то другое? ");
         return true;
@@ -29,7 +29,7 @@ public class BooleanMethods {
         return true;
     }
 
-    public boolean isNullStringEntered() {
+    public boolean isEmptyString() {
         System.out.print(Methods.getMethodName() +
                 "() -> пользователь ввёл пустую строку или из одних пробелов? ");
         return true;
@@ -41,13 +41,13 @@ public class BooleanMethods {
         return true;
     }
 
-    public boolean isPathValid() {
+    public boolean isValidPath() {
         System.out.print(Methods.getMethodName() +
                 "() -> путь до файла, который вы ищите на ssd, действительный? ");
         return true;
     }
 
-    public boolean isFileExist() {
+    public boolean isExistFile() {
         System.out.print(Methods.getMethodName() +
                 "() -> файл по указанному адресу существует? ");
         return true;
