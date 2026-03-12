@@ -6,34 +6,34 @@ public class Main {
 
     private static void useNonBoolMethods() {
         System.out.println("\n1.НЕ BOOLEAN-МЕТОДЫ");
-        NonBooleanMethods nonBoolObject = new NonBooleanMethods();
-        nonBoolObject.findLongestWord();
-        nonBoolObject.chooseMenuItem();
-        nonBoolObject.calculateAverageGrades();
-        nonBoolObject.countUniqueWords();
-        nonBoolObject.outMsgError();
-        nonBoolObject.syncDataWithCloud();
-        nonBoolObject.restoreDataFromBackup();
-        nonBoolObject.pauseDownloading();
-        nonBoolObject.resetToFactorySettings();
-        nonBoolObject.writeToFile();
-        nonBoolObject.convertCtoF();
-        nonBoolObject.inputMathExpression();
-        nonBoolObject.identifyWinner();
-        nonBoolObject.findBookByAuthor();
+        NonBooleanMethods nonBm = new NonBooleanMethods();
+        nonBm.findLongestWord();
+        nonBm.chooseMenuItem();
+        nonBm.calculateAverageGrades();
+        nonBm.countUniqueWords();
+        nonBm.outMsgError();
+        nonBm.syncDataWithCloud();
+        nonBm.restoreDataFromBackup();
+        nonBm.pauseDownloading();
+        nonBm.resetToFactorySettings();
+        nonBm.writeToFile();
+        nonBm.convertCtoF();
+        nonBm.inputMathExpression();
+        nonBm.identifyWinner();
+        nonBm.findBookByAuthor();
     }
 
     private static void useBoolMethods() {
         System.out.println("\n2.BOOLEAN-МЕТОДЫ");
-        BooleanMethods boolObject = new BooleanMethods();
-        System.out.println(boolObject.canContinue());
-        System.out.println(boolObject.hasUniqueNumber());
-        System.out.println(boolObject.isLetter());
-        System.out.println(boolObject.hasEqualDigits());
-        System.out.println(boolObject.hasAttempts());
-        System.out.println(boolObject.isEmptyString());
-        System.out.println(boolObject.isEvenNumber());
-        System.out.println(boolObject.isValidPath());
-        System.out.println(boolObject.isExistFile());
+        BooleanMethods bm = new BooleanMethods();
+        System.out.println(bm.canContinue());
+        System.out.println(bm.hasUniqueNumber());
+        System.out.println(bm.isLetter());
+        System.out.println(bm.hasEqualDigits());
+        System.out.println(bm.hasAttempts());
+        System.out.println(bm.isEmptyString());
+        System.out.println(bm.isEvenNumber());
+        System.out.println(bm.isValidPath());
+        System.out.println(bm.isExistFile());
     }
 }
