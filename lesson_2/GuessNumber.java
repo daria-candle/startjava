@@ -1,6 +1,6 @@
 import java.util.InputMismatchException;
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class GuessNumber {
     private int hiddenNumber;

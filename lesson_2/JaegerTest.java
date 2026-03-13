@@ -20,6 +20,7 @@ public class JaegerTest {
         gipsyDanger.drift();
         gipsyDanger.move();
         gipsyDanger.attack();
+        
         Jaeger strikerEureka = new Jaeger("Striker Eureka", "Mark-5", "Australia", 76.2f, 1.850f, 10, 10, 9);
         System.out.println("\nModelName: " + strikerEureka.getModelName());
         System.out.println("Mark: " + strikerEureka.getMark());

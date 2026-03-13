@@ -2,7 +2,6 @@ class Calculator {
     private int operand1;
     private int operand2;
     private char operator;
-    float result;
 
     public void setOperand1(int operand1) {
         this.operand1 = operand1;
@@ -17,6 +16,7 @@ class Calculator {
     }
 
     public float calculate() {
+        float result = 1;
         switch (operator) {
             case '+':
                 result = operand1 + operand2;
@@ -42,7 +42,6 @@ class Calculator {
                 }
                 break;
             case '^':
-                result = 1;
                 for (int i = 1; i <= Math.abs(operand2); i++) {
                     result *= operand1;
                 }
