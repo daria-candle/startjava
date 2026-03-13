@@ -3,13 +3,6 @@ class Calculator {
     private int operand2;
     private char operator;
     float result;
-    
-    public Calculator() {
-        operand1 = 0;
-        operand2 = 0;
-        operator = ' ';
-        result = 0;
-    }
 
     public void setOperand1(int operand1) {
         this.operand1 = operand1;
@@ -23,7 +16,7 @@ class Calculator {
         this.operator = operator;
     }
 
-    public float getResult() {
+    public float calculate() {
         switch (operator) {
             case '+':
                 result = operand1 + operand2;
@@ -49,16 +42,12 @@ class Calculator {
                 }
                 break;
             case '^':
-                if (operand2 == 0) {
-                    result = 1;
-                } else {
-                    result = operand1;
-                    for (int i = 2; i <= operand2; i++) {
-                        result *= operand1;
-                    }
-                    if (operand2 < 0) {
-                        result = (float) 1 / result;
-                    }
+                result = 1;
+                for (int i = 1; i <= Math.abs(operand2); i++) {
+                    result *= operand1;
+                }
+                if (operand2 < 0) {
+                    result = 1 / result;
                 }
                 break;
             default:
