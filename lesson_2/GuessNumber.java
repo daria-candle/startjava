@@ -21,12 +21,12 @@ public class GuessNumber {
         hiddenNumber = new Random().nextInt(minNumber, maxNumber + 1);
         while (true) {
             inputNumber(player1);
-            if (isWinnerFound(player1)) {
+            if (isGuessed(player1)) {
                 outputWinner(player1);
                 break;
             }
             inputNumber(player2);
-            if (isWinnerFound(player2)) {
+            if (isGuessed(player2)) {
                 outputWinner(player2);
                 break;
             }
@@ -43,17 +43,17 @@ public class GuessNumber {
         }
     }
 
-    private boolean isWinnerFound(Player player) {
+    private boolean isGuessed(Player player) {
         int playerNumber = player.getNumber();
-        if (playerNumber > hiddenNumber) {
-            System.out.println(playerNumber + " больше того, что загадал компьютер");
-            return false;
-        } else if (playerNumber < hiddenNumber) {
-            System.out.println(playerNumber + " меньше того, что загадал компьютер");
-            return false;
-        } else {
+        if (playerNumber == hiddenNumber) {
             return true;
         }
+        if (playerNumber > hiddenNumber) {
+            System.out.println(playerNumber + " больше того, что загадал компьютер");
+        } else {
+            System.out.println(playerNumber + " меньше того, что загадал компьютер");
+        }
+        return false;
     }
 
     private void outputWinner(Player player) {

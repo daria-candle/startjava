@@ -17,8 +17,8 @@ public class GuessNumberTest {
                 System.out.println("Ошибка: " + e.getMessage());
                 scanner.nextLine(); 
             }
-            GuessNumber guessNumber = new GuessNumber(playerName1, playerName2, scanner);
-            guessNumber.play();
+            GuessNumber game = new GuessNumber(playerName1, playerName2, scanner);
+            game.play();
             do {
                 System.out.print("Хотите продолжить игру? [yes/no]:");
                 answer = scanner.next();

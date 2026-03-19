@@ -3,12 +3,8 @@ public class Player {
     private int number;
 
     public Player(String name) {
-        setName(name);
-    }
-
-    public void setName(String name) {
-        if (name == "") {
-            System.out.println("Пустая строка");
+        if (name.isEmpty()) {
+            System.out.println("Имя игрока не должно быть пустым");
         } else {
             this.name = name;
         }
