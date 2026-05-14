@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.base;
+
 import javax.swing.JOptionPane;
 
 public class VariableNamesTheme {

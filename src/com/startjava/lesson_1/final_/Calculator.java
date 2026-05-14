@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.final_;
+
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;

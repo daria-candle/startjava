@@ -1,3 +1,5 @@
+package com.startjava.lesson_2_3.calculator;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
